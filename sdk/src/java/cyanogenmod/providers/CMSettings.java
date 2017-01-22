@@ -1017,6 +1017,16 @@ public final class CMSettings {
                 new InclusiveIntegerRangeValidator(0, 11);
 
         /**
+         * Whether to enable the pixel navbar animation
+         * @hide
+         */
+        public static final String PIXEL_NAV_ANIMATION = "navigation_pixel_animation";
+
+        /** @hide */
+        public static final Validator PIXEL_NAV_ANIMATION_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to wake the screen with the back key, the value is boolean.
          * 0 = 0ff, 1 = on
          */
@@ -1914,6 +1924,7 @@ public final class CMSettings {
                 CMSettings.System.NAV_BUTTONS,
                 CMSettings.System.KEY_HOME_LONG_PRESS_ACTION,
                 CMSettings.System.KEY_HOME_DOUBLE_TAP_ACTION,
+                CMSettings.System.PIXEL_NAV_ANIMATION,
                 CMSettings.System.BACK_WAKE_SCREEN,
                 CMSettings.System.MENU_WAKE_SCREEN,
                 CMSettings.System.VOLUME_WAKE_SCREEN,
@@ -2057,6 +2068,7 @@ public final class CMSettings {
                     NAVIGATION_BAR_MENU_ARROW_KEYS_VALIDATOR);
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
+            VALIDATORS.put(PIXEL_NAV_ANIMATION, PIXEL_NAV_ANIMATION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREENN_VALIDATOR);
             VALIDATORS.put(VOLUME_ANSWER_CALL, VOLUME_ANSWER_CALL_VALIDATOR);
