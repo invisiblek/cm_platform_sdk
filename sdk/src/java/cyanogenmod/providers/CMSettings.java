@@ -1616,6 +1616,16 @@ public final class CMSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to change the color of the status bar during battery saver mode
+         0 = 0ff, 1 = on
+         */
+        public static final String SYSTEMUI_BATTERYMODE_COLOR = "systemui_batterymode_color";
+
+        /** @hide */
+        public static final Validator SYSTEMUI_BATTERYMODE_COLOR_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether or not volume button music controls should be enabled to seek media tracks
          * 0 = 0ff, 1 = on
          */
@@ -2148,6 +2158,7 @@ public final class CMSettings {
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
             VALIDATORS.put(SYSTEMUI_BURNIN_PROTECTION, SYSTEMUI_BURNIN_PROTECTION_VALIDATOR);
+            VALIDATORS.put(SYSTEMUI_BATTERYMODE_COLOR, SYSTEMUI_BATTERYMODE_COLOR_VALIDATOR);
             VALIDATORS.put(VOLBTN_MUSIC_CONTROLS, VOLBTN_MUSIC_CONTROLS_VALIDATOR);
             VALIDATORS.put(USE_EDGE_SERVICE_FOR_GESTURES,
                     USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR);
